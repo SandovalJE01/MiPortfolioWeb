@@ -22,18 +22,18 @@ document.body.appendChild(toggleModo);
 
 const aplicarTema = () => {
   const modo = localStorage.getItem('modo');
-  if (modo === 'oscuro') {
-    document.body.classList.add('dark-mode');
+  if (modo === 'claro') {
+    document.body.classList.add('light-mode');
   } else {
-    document.body.classList.remove('dark-mode');
+    document.body.classList.remove('light-mode');
   }
 };
 
 aplicarTema();
 
 toggleModo.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  localStorage.setItem('modo', document.body.classList.contains('dark-mode') ? 'oscuro' : 'claro');
+  document.body.classList.toggle('light-mode');
+  localStorage.setItem('modo', document.body.classList.contains('light-mode') ? 'claro' : 'oscuro');
 });
 
 // Traducciones extendidas
