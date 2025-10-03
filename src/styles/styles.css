@@ -39,7 +39,7 @@ nav {
   -webkit-backdrop-filter: blur(12px);
   
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+
   
   display: flex;
   justify-content: space-between;
@@ -113,65 +113,34 @@ section {
     }
 
 /* Sobre mi*/
-/* .sobre-mi{
-    gap: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-} */
+
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1px;
-  gap: 10px 10px;
-  justify-items: stretch;
-  align-items: stretch;
-  justify-content: space-around;
-  align-content: start;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-}
-
-.info:nth-child(1){
-  grid-area: 2 / 1;
-  grid-column: 1 / 1;
-    display: flex;
-  justify-content: space-between;
+  gap: 10px;
   align-items: center;
-  color: #f5f5f5;
-  max-width: 1100px;
-  padding-left: 20%;
-  text-align: justify;
+  justify-content: center;
+  max-width: 1100px; /* Limitamos el ancho máximo para centrarlo */
+  margin: 0 auto; /* Centramos el contenedor */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 2rem;
 }
 
-.img-coding:nth-child(2){
-  grid-area: 2 / 2;
-    height: 500px;
-  width: auto;
+.info {
+color: #f5f5f5;
+text-align: justify;
 }
 
-/* .img-coding{
-  height: 500px;
-  width: auto;
-} */
-
-/* .sobre-mi h3.info{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #f5f5f5;
-  max-width: 1100px;
-  padding-left: 20%;
-
-} */
-/* .sobre-mi h1.title{
-  align-content: center;
-} */
-
-
+.img-coding{
+  max-width: 100%; /* Hacemos la imagen responsiva */
+  height: auto;
+  justify-self: center; /* Centramos la imagen en su celda de la grilla */
+}
 
 /*Proyectos*/
-/* tarjetas para proyectos*/
+
 .cards-proyects{
   display: flex;
   flex-wrap: wrap;
@@ -184,26 +153,30 @@ section {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 1rem;
-  max-width: 400px;
+  width: 100%; /* Hacemos que ocupe el ancho disponible en móvil */
+  max-width: 400px; /* Mantenemos el máximo en escritorio */
   text-align: center;
   transition: transform 0.3s ease;
 }
 
 .img-proyect{
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 200px;
   object-fit: contain;
 }
 
+/* CORRECCIÓN DE SINTAXIS SASS A CSS */
 span a {
 	font-size: 18px;
 	color: #201B3B;
 	text-decoration: none;
 	margin: 0 10px;
 	transition: all 0.4s ease-in-out;
-	&:hover {
-		color: rosybrown;
-	}
+}
+
+span a:hover {
+    color: rosybrown;
 }
 
 /*Tecnologias y Herramientas*/
@@ -223,7 +196,8 @@ span a {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 1rem;
-  max-width: 250px;
+  width: 100%; /* Hacemos que ocupe el ancho disponible en móvil */
+  max-width: 250px; /* Mantenemos el máximo en escritorio */
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -289,22 +263,170 @@ body.light-mode {
   color: #222;
 }
 
-/* Navbar */
+
 body.light-mode nav {
   background: rgba(255, 255, 255, 0.6);
   color: #222;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Ejemplo de textos/títulos */
+
 body.light-mode h1,
 body.light-mode h2,
 body.light-mode h3 {
   color: #111;
 }
 
-/* Links */
+
 body.light-mode a {
   color: #0077cc;
 }
 
+/******************************************/
+/* ESTILOS PARA DISPOSITIVOS MÓVILES    */
+/******************************************/
+@media (max-width: 768px) {
+
+  /* Ajustes generales */
+  section {
+    padding: 3rem 1rem; /* Menos padding en los lados */
+  }
+
+  h1 {
+    font-size: 2rem; /* Títulos un poco más pequeños */
+  }
+
+  /* Barra de navegación */
+  nav {
+    flex-direction: column; /* Apila el logo y los links */
+    height: auto; /* Altura automática para que quepa todo */
+    padding: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column; /* Apila los links */
+    gap: 15px; /* Menos espacio entre links */
+    margin-top: 1rem; /* Espacio entre el logo y los links */
+    align-items: center;
+  }
+
+  /* Sección Hero */
+  .hero {
+    padding: 0 1rem; /* Asegura que el texto no toque los bordes */
+  }
+  
+  .avatar {
+    width: 200px; /* Avatar más pequeño */
+    height: 220px;
+  }
+
+  .hero h3 {
+    font-size: 1.5rem; /* Texto más pequeño */
+  }
+
+  .hero h4 {
+    font-size: 1rem;
+  }
+
+  /* Sección Sobre Mí */
+  .container {
+    grid-template-columns: 1fr; /* Cambiamos a una sola columna */
+    padding: 1rem;
+    gap: 2rem; /* Espacio entre el texto y la imagen */
+  }
+
+  .info {
+    padding-left: 0; /* Quitamos el padding que tenía */
+    text-align: center; /* Centramos el texto para que se vea mejor */
+  }
+
+  .img-coding {
+    max-width: 80%; /* Hacemos la imagen un poco más pequeña */
+  }
+}
+
+/* ======================================== */
+/* ESTILOS PARA EL MENÚ HAMBURGUESA        */
+/* ======================================== */
+
+/* Estilo del botón hamburguesa */
+.hamburger-menu {
+  display: none; /* Oculto por defecto en escritorio */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 20; /* Aseguramos que esté por encima de otros elementos */
+}
+
+/* Las 3 líneas del ícono */
+.hamburger-menu span {
+  width: 2rem;
+  height: 0.25rem;
+  background: #e0FF4F; /* Color de las líneas */
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* --- Animación del botón a "X" --- */
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+
+/* --- Adaptación en la Media Query para móvil --- */
+@media (max-width: 768px) {
+
+  /* Hacemos visible el botón hamburguesa */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Ocultamos la navegación por defecto en móvil */
+  nav ul#nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 60%;
+    background: rgba(0, 23, 26, 0.95); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Más espacio entre los links */
+    
+    /* Ocultamos el menú fuera de la pantalla */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Clase que se añade con JS para mostrar el menú */
+  nav ul#nav-links.active {
+    transform: translateX(0);
+  }
+  
+  /* Quitamos el ajuste que hicimos antes al <nav> para que no se apile todo */
+  nav {
+    flex-direction: row; /* Volvemos a la dirección horizontal */
+    height: 90px;
+    padding: 5px 30px;
+  }
+}

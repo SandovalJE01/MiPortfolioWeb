@@ -102,3 +102,27 @@ selectorIdioma.addEventListener('change', e => {
 const idiomaGuardado = localStorage.getItem('idioma') || 'es';
 selectorIdioma.value = idiomaGuardado;
 cambiarIdioma(idiomaGuardado);
+
+// ========================================
+//  LÓGICA PARA EL MENÚ HAMBURGUESA
+// ========================================
+
+const hamburgerButton = document.getElementById('hamburger-menu');
+const navLinks = document.getElementById('nav-links');
+
+// Escuchamos el clic en el botón de hamburguesa
+hamburgerButton.addEventListener('click', () => {
+  // Añade/quita la clase 'active' para mostrar/ocultar el menú
+  navLinks.classList.toggle('active');
+  // Añade/quita la clase 'active' para animar el ícono
+  hamburgerButton.classList.toggle('active');
+});
+
+// Opcional: Cerrar el menú al hacer clic en un enlace
+// Esto es útil para SPAs (Single Page Applications) como la tuya
+document.querySelectorAll('#nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    hamburgerButton.classList.remove('active');
+  });
+});
