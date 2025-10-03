@@ -82,7 +82,7 @@ section {
       height: 100vh;
       background: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('/src/img/background.jpg') center/cover no-repeat;
+        url('../img/background.jpg') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -275,6 +275,12 @@ body.light-mode h1,
 body.light-mode h2,
 body.light-mode h3 {
   color: #111;
+}
+
+body.light-mode h3.name,
+body.light-mode h4.occupation
+{
+  color: #ccc;
 }
 
 

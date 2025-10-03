@@ -68,6 +68,8 @@ const traducciones = {
   }
 };
 
+
+
 const cambiarIdioma = (idioma) => {
   localStorage.setItem('idioma', idioma);
   document.querySelector('a[href="#inicio"]').textContent = traducciones[idioma].inicio;
@@ -85,44 +87,48 @@ const cambiarIdioma = (idioma) => {
   document.querySelector('#contacto h1').textContent = traducciones[idioma].tituloContacto;
 };
 
-// Agregar selector de idioma con localStorage
-const selectorIdioma = document.createElement('select');
-selectorIdioma.style.position = 'fixed';
-selectorIdioma.style.top = '1rem';
-selectorIdioma.style.right = '1rem';
-selectorIdioma.style.zIndex = '1001';
-selectorIdioma.innerHTML = '<option value="es">ES</option><option value="en">EN</option>';
-document.body.appendChild(selectorIdioma);
+// // Agregar selector de idioma con localStorage
+// const selectorIdioma = document.createElement('select');
+// selectorIdioma.style.position = 'fixed';
+// selectorIdioma.style.top = '1rem';
+// selectorIdioma.style.right = '1rem';
+// selectorIdioma.style.zIndex = '1001';
+// selectorIdioma.innerHTML = '<option value="es">ES</option><option value="en">EN</option>';
+// document.body.appendChild(selectorIdioma);
 
-selectorIdioma.addEventListener('change', e => {
-  cambiarIdioma(e.target.value);
-});
+// selectorIdioma.addEventListener('change', e => {
+//   cambiarIdioma(e.target.value);
+// });
 
-// Aplicar idioma guardado
-const idiomaGuardado = localStorage.getItem('idioma') || 'es';
-selectorIdioma.value = idiomaGuardado;
-cambiarIdioma(idiomaGuardado);
+// // Aplicar idioma guardado
+// const idiomaGuardado = localStorage.getItem('idioma') || 'es';
+// selectorIdioma.value = idiomaGuardado;
+// cambiarIdioma(idiomaGuardado);
 
-// ========================================
-//  LÓGICA PARA EL MENÚ HAMBURGUESA
-// ========================================
-
+/* ========================================
+LÓGICA PARA EL MENÚ HAMBURGUESA
+======================================== */
 const hamburgerButton = document.getElementById('hamburger-menu');
 const navLinks = document.getElementById('nav-links');
 
+if (hamburgerButton && navLinks) {
 // Escuchamos el clic en el botón de hamburguesa
 hamburgerButton.addEventListener('click', () => {
-  // Añade/quita la clase 'active' para mostrar/ocultar el menú
-  navLinks.classList.toggle('active');
-  // Añade/quita la clase 'active' para animar el ícono
-  hamburgerButton.classList.toggle('active');
+// Añade/quita la clase 'active' para mostrar/ocultar el menú
+navLinks.classList.toggle('active');
+// Añade/quita la clase 'active' para animar el ícono
+hamburgerButton.classList.toggle('active');
+// accesibilidad
+const expanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
+hamburgerButton.setAttribute('aria-expanded', (!expanded).toString());
 });
 
-// Opcional: Cerrar el menú al hacer clic en un enlace
-// Esto es útil para SPAs (Single Page Applications) como la tuya
+// Cerrar el menú al hacer clic en un enlace
 document.querySelectorAll('#nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    hamburgerButton.classList.remove('active');
-  });
+link.addEventListener('click', () => {
+navLinks.classList.remove('active');
+hamburgerButton.classList.remove('active');
+hamburgerButton.setAttribute('aria-expanded', 'false');
 });
+});
+}
