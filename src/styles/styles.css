@@ -46,7 +46,7 @@ nav {
   align-items: center;
   padding: 5px 30px;
   z-index: 10;
-  transition: all 0.3s ease; /* suaviza cambios */
+  transition: all 0.3s ease;
 }
 
 nav:hover {
@@ -68,7 +68,7 @@ nav:hover {
     }
 
   nav .logo img {
-  height: 40px;   /* ajustá según tu logo */
+  height: 40px;
   width: auto;
 }
 
@@ -121,7 +121,7 @@ section {
   gap: 10px;
   align-items: center;
   justify-content: center;
-  max-width: 1100px; /* Limitamos el ancho máximo para centrarlo */
+  max-width: 1100px;
   margin: 0 auto; /* Centramos el contenedor */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
@@ -134,9 +134,9 @@ text-align: justify;
 }
 
 .img-coding{
-  max-width: 100%; /* Hacemos la imagen responsiva */
+  max-width: 100%;
   height: auto;
-  justify-self: center; /* Centramos la imagen en su celda de la grilla */
+  justify-self: center;
 }
 
 /*Proyectos*/
@@ -151,9 +151,9 @@ text-align: justify;
 .card-proyect{
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   padding: 1rem;
-  width: 100%; /* Hacemos que ocupe el ancho disponible en móvil */
+  width: 100%;
   max-width: 400px; /* Mantenemos el máximo en escritorio */
   text-align: center;
   transition: transform 0.3s ease;
@@ -166,7 +166,7 @@ text-align: justify;
   object-fit: contain;
 }
 
-/* CORRECCIÓN DE SINTAXIS SASS A CSS */
+
 span a {
 	font-size: 18px;
 	color: #201B3B;
@@ -196,7 +196,7 @@ span a:hover {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 1rem;
-  width: 100%; /* Hacemos que ocupe el ancho disponible en móvil */
+  width: 100%;
   max-width: 250px; /* Mantenemos el máximo en escritorio */
   text-align: center;
   transition: transform 0.3s ease;
@@ -257,9 +257,9 @@ footer {
   margin-top: 2rem;
 }
 
-/* Light mode */
+/* LIGHT MODE*/
 body.light-mode {
-  background-color: #f5f5f5;
+  background-color: #e4e4e4;
   color: #222;
 }
 
@@ -288,24 +288,24 @@ body.light-mode a {
   color: #0077cc;
 }
 
-/******************************************/
-/* ESTILOS PARA DISPOSITIVOS MÓVILES    */
-/******************************************/
+
+/* ESTILOS PARA DISPOSITIVOS MÓVILES*/
+
 @media (max-width: 768px) {
 
   /* Ajustes generales */
   section {
-    padding: 3rem 1rem; /* Menos padding en los lados */
+    padding: 3rem 1rem;
   }
 
   h1 {
-    font-size: 2rem; /* Títulos un poco más pequeños */
+    font-size: 2rem;
   }
 
   /* Barra de navegación */
   nav {
-    flex-direction: column; /* Apila el logo y los links */
-    height: auto; /* Altura automática para que quepa todo */
+    flex-direction: column;
+    height: auto;
     padding: 1rem;
   }
   
@@ -318,16 +318,16 @@ body.light-mode a {
 
   /* Sección Hero */
   .hero {
-    padding: 0 1rem; /* Asegura que el texto no toque los bordes */
+    padding: 0 1rem;
   }
   
   .avatar {
-    width: 200px; /* Avatar más pequeño */
+    width: 200px;
     height: 220px;
   }
 
   .hero h3 {
-    font-size: 1.5rem; /* Texto más pequeño */
+    font-size: 1.5rem;
   }
 
   .hero h4 {
@@ -336,28 +336,27 @@ body.light-mode a {
 
   /* Sección Sobre Mí */
   .container {
-    grid-template-columns: 1fr; /* Cambiamos a una sola columna */
+    grid-template-columns: 1fr;
     padding: 1rem;
-    gap: 2rem; /* Espacio entre el texto y la imagen */
+    gap: 2rem;
   }
 
   .info {
-    padding-left: 0; /* Quitamos el padding que tenía */
-    text-align: center; /* Centramos el texto para que se vea mejor */
+    padding-left: 0;
+    text-align: center;
   }
 
   .img-coding {
-    max-width: 80%; /* Hacemos la imagen un poco más pequeña */
+    max-width: 80%;
   }
 }
 
-/* ======================================== */
-/* ESTILOS PARA EL MENÚ HAMBURGUESA        */
-/* ======================================== */
 
-/* Estilo del botón hamburguesa */
+/*MENÚ HAMBURGUESA MOBILE*/
+
+/*botón hamburguesa*/
 .hamburger-menu {
-  display: none; /* Oculto por defecto en escritorio */
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
@@ -366,21 +365,21 @@ body.light-mode a {
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 20; /* Aseguramos que esté por encima de otros elementos */
+  z-index: 20;
 }
 
 /* Las 3 líneas del ícono */
 .hamburger-menu span {
   width: 2rem;
   height: 0.25rem;
-  background: #e0FF4F; /* Color de las líneas */
-  border-radius: 10px;
+  background: #e0FF4F;
+  border-radius: 5px;
   transition: all 0.3s linear;
   position: relative;
   transform-origin: 1px;
 }
 
-/* --- Animación del botón a "X" --- */
+/*Animación del botón a "X"*/
 .hamburger-menu.active span:nth-child(1) {
   transform: rotate(45deg);
 }
@@ -395,33 +394,34 @@ body.light-mode a {
 }
 
 
-/* --- Adaptación en la Media Query para móvil --- */
+/*Media Query para móvil*/
 @media (max-width: 768px) {
 
-  /* Hacemos visible el botón hamburguesa */
+
   .hamburger-menu {
     display: flex;
   }
 
-  /* Ocultamos la navegación por defecto en móvil */
+
   nav ul#nav-links {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
-    width: 60%;
-    background: rgba(0, 23, 26, 0.95); /* Fondo oscuro semitransparente */
+    height: 50vh;
+    width: 70%;
+    border-radius: 20px;
+    background: rgba(0, 23, 26, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem; /* Más espacio entre los links */
+    gap: 2rem;
     
-    /* Ocultamos el menú fuera de la pantalla */
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+    /*menú fuera de la pantalla */
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in-out;
   }
 
   /* Clase que se añade con JS para mostrar el menú */
@@ -429,9 +429,9 @@ body.light-mode a {
     transform: translateX(0);
   }
   
-  /* Quitamos el ajuste que hicimos antes al <nav> para que no se apile todo */
+
   nav {
-    flex-direction: row; /* Volvemos a la dirección horizontal */
+    flex-direction: row;
     height: 90px;
     padding: 5px 30px;
   }

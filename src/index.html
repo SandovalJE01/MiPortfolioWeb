@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/ezequiel-logo.svg">
+    <title>Ezequiel Portfolio</title>
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
@@ -229,7 +230,7 @@
   </div>
 
   <div class="tech-group">
-    <h3>Tools</h3>
+    <h3>Herramientas</h3>
     <div class="cards">
       <div class="card">
         <img loading="lazy" src="./img/logos/git.svg" alt="Git" />
@@ -243,7 +244,7 @@
   </div>
 
   <div class="tech-group">
-    <h3>Project Management</h3>
+    <h3>Gestion de Proyectos</h3>
     <div class="cards">
       <div class="card">
         <img loading="lazy" src="./img/logos/Trello.svg" alt="Trello" />
@@ -303,23 +304,21 @@
       >
     </div>
             <div class="card">
-      <img loading="lazy" src="./img/certificados/Certificado de Participacion - Inmersion IA + Google Gemini.jpg" alt="IA" />
+            <img loading="lazy" src="./img/certificados/CertificadoDeParticipacion-InmersionIA.jpg" alt="IA" />
       <h3>Certificado de Participacion - Alura + Google Gemini</h3>
-      <a
-        href="https://credsverse.com/credentials/b3513f3a-1db3-42e7-8b31-e08f065d6031"
-        target="_blank"
-        >Ver Credencial</a
-      >
+      <a href="https://credsverse.com/credentials/b3513f3a-1db3-42e7-8b31-e08f065d6031"
+        target="_blank">Ver Credencial</a> 
     </div>
   </div>
 </section>
 
 <section id="contacto">
   <h1>Contacto</h1>
-  <form>
-    <input type="text" placeholder="Tu Nombre" required />
-    <input type="email" placeholder="Tu Email" required />
-    <textarea placeholder="Tu Mensaje" required></textarea>
+  <form action="https://formspree.io/f/xnqkjlzw" method="post">
+    <input type="text" name="nombre"  placeholder="Tu Nombre" required />
+    <input type="email" name="email"  placeholder="Tu Email" required />
+    <input type="number" name="telefono"  placeholder="Telefono" required />
+    <textarea name="message" placeholder="Asunto" required></textarea>
     <button type="submit">Enviar</button>
   </form>
 </section>

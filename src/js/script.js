@@ -36,87 +36,17 @@ toggleModo.addEventListener('click', () => {
   localStorage.setItem('modo', document.body.classList.contains('light-mode') ? 'claro' : 'oscuro');
 });
 
-// Traducciones extendidas
-const traducciones = {
-  "es": {
-    "inicio": "Inicio",
-    "sobreMi": "Sobre Mí",
-    "proyectos": "Proyectos",
-    "tecnologias": "Tecnologías y Herramientas",
-    "certificaciones": "Certificaciones",
-    "contacto": "Contacto",
-    "tituloInicio": "Bienvenido a mi Portfolio",
-    "tituloSobreMi": "Conóceme",
-    "tituloProyectos": "Mis Proyectos",
-    "tituloTecnologias": "Tecnologías y Herramientas",
-    "tituloCertificaciones": "Certificaciones",
-    "tituloContacto": "Contáctame"
-  },
-  "en": {
-    "inicio": "Home",
-    "sobreMi": "About Me",
-    "proyectos": "Projects",
-    "tecnologias": "Technologies & Tools",
-    "certificaciones": "Certifications",
-    "contacto": "Contact",
-    "tituloInicio": "Welcome to my Portfolio",
-    "tituloSobreMi": "Get to Know Me",
-    "tituloProyectos": "My Projects",
-    "tituloTecnologias": "Technologies & Tools",
-    "tituloCertificaciones": "Certifications",
-    "tituloContacto": "Contact Me"
-  }
-};
 
-
-
-const cambiarIdioma = (idioma) => {
-  localStorage.setItem('idioma', idioma);
-  document.querySelector('a[href="#inicio"]').textContent = traducciones[idioma].inicio;
-  document.querySelector('a[href="#sobre-mi"]').textContent = traducciones[idioma].sobreMi;
-  document.querySelector('a[href="#proyectos"]').textContent = traducciones[idioma].proyectos;
-  document.querySelector('a[href="#tecnologias"]').textContent = traducciones[idioma].tecnologias;
-  document.querySelector('a[href="#certificaciones"]').textContent = traducciones[idioma].certificaciones;
-  document.querySelector('a[href="#contacto"]').textContent = traducciones[idioma].contacto;
-
-  document.querySelector('#inicio h1').textContent = traducciones[idioma].tituloInicio;
-  document.querySelector('#sobre-mi h1').textContent = traducciones[idioma].tituloSobreMi;
-  document.querySelector('#proyectos h1').textContent = traducciones[idioma].tituloProyectos;
-  document.querySelector('#tecnologias h1').textContent = traducciones[idioma].tituloTecnologias;
-  document.querySelector('#certificaciones h1').textContent = traducciones[idioma].tituloCertificaciones;
-  document.querySelector('#contacto h1').textContent = traducciones[idioma].tituloContacto;
-};
-
-// // Agregar selector de idioma con localStorage
-// const selectorIdioma = document.createElement('select');
-// selectorIdioma.style.position = 'fixed';
-// selectorIdioma.style.top = '1rem';
-// selectorIdioma.style.right = '1rem';
-// selectorIdioma.style.zIndex = '1001';
-// selectorIdioma.innerHTML = '<option value="es">ES</option><option value="en">EN</option>';
-// document.body.appendChild(selectorIdioma);
-
-// selectorIdioma.addEventListener('change', e => {
-//   cambiarIdioma(e.target.value);
-// });
-
-// // Aplicar idioma guardado
-// const idiomaGuardado = localStorage.getItem('idioma') || 'es';
-// selectorIdioma.value = idiomaGuardado;
-// cambiarIdioma(idiomaGuardado);
-
-/* ========================================
-LÓGICA PARA EL MENÚ HAMBURGUESA
-======================================== */
+/*MENÚ HAMBURGUESA */
 const hamburgerButton = document.getElementById('hamburger-menu');
 const navLinks = document.getElementById('nav-links');
 
 if (hamburgerButton && navLinks) {
 // Escuchamos el clic en el botón de hamburguesa
 hamburgerButton.addEventListener('click', () => {
-// Añade/quita la clase 'active' para mostrar/ocultar el menú
+// Añadir/quitar la clase 'active' para mostrar/ocultar el menú
 navLinks.classList.toggle('active');
-// Añade/quita la clase 'active' para animar el ícono
+// Añadir/quitar la clase 'active' para animar el ícono
 hamburgerButton.classList.toggle('active');
 // accesibilidad
 const expanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
