@@ -15,15 +15,14 @@ body {
 
 h1 {
   margin-bottom: 2rem;
-  color: #e0FF4F;
+  color: #e0ff4f;
 }
 
-h2
-{
+h2 {
   color: #ccc;
 }
 
-    /* Navbar */
+/* Navbar */
 nav {
   position: fixed;
   top: 20px;
@@ -32,15 +31,14 @@ nav {
   max-width: 1100px;
   width: 90%;
   height: 90px;
-  
+
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  
+
   border-radius: 30px;
 
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,19 +53,19 @@ nav:hover {
   transform: translateX(-50%) translateY(-2px); /* flota un poquito */
 }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-    }
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
 
-    nav ul li a {
-      text-decoration: none;
-      color: #e0FF4F;
-      font-weight: bold;
-    }
+nav ul li a {
+  text-decoration: none;
+  color: #e0ff4f;
+  font-weight: bold;
+}
 
-  nav .logo img {
+nav .logo img {
   height: 40px;
   width: auto;
 }
@@ -77,43 +75,41 @@ section {
   text-align: center;
 }
 
- /* Hero Section */
-    .hero {
-      height: 100vh;
-      background: 
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('../img/background.jpg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #e0FF4F;
-      text-align: center;
-    }
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/background.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e0ff4f;
+  text-align: center;
+}
 
-    .avatar {
-      background: rgba(0, 0, 0, 0.4);
-      width: 300px;
-      height: 330px;
-      border-radius: 30%;
-      border: 2px solid #e0FF4F;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
+.avatar {
+  background: rgba(0, 0, 0, 0.4);
+  width: 300px;
+  height: 330px;
+  border-radius: 30%;
+  border: 2px solid #e0ff4f;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
 
-    .hero h3 {
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
+.hero h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
 
-    .hero h4 {
-      font-weight: normal;
-      font-size: 1.2rem;
-      opacity: 0.8;
-    }
+.hero h4 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
 
 /* Sobre mi*/
-
 
 .container {
   display: grid;
@@ -129,11 +125,11 @@ section {
 }
 
 .info {
-color: #f5f5f5;
-text-align: justify;
+  color: #f5f5f5;
+  text-align: justify;
 }
 
-.img-coding{
+.img-coding {
   max-width: 100%;
   height: auto;
   justify-self: center;
@@ -141,17 +137,17 @@ text-align: justify;
 
 /*Proyectos*/
 
-.cards-proyects{
+.cards-proyects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
 }
 
-.card-proyect{
+.card-proyect {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   width: 100%;
   max-width: 400px; /* Mantenemos el máximo en escritorio */
@@ -159,28 +155,27 @@ text-align: justify;
   transition: transform 0.3s ease;
 }
 
-.img-proyect{
+.img-proyect {
   width: 100%;
   max-width: 300px;
   height: 200px;
   object-fit: contain;
 }
 
-
 span a {
-	font-size: 18px;
-	color: #201B3B;
-	text-decoration: none;
-	margin: 0 10px;
-	transition: all 0.4s ease-in-out;
+  font-size: 18px;
+  color: #201b3b;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: all 0.4s ease-in-out;
 }
 
 span a:hover {
-    color: rosybrown;
+  color: rosybrown;
 }
 
 /*Tecnologias y Herramientas*/
-.tech-group h3{
+.tech-group h3 {
   color: #fff;
 }
 
@@ -194,7 +189,7 @@ span a:hover {
 .card {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   width: 100%;
   max-width: 250px; /* Mantenemos el máximo en escritorio */
@@ -226,7 +221,8 @@ form {
   margin: 0 auto;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -250,7 +246,7 @@ button:hover {
 /*footer*/
 
 footer {
-  background: #e0FF4F;
+  background: #e0ff4f;
   color: #00272b;
   text-align: center;
   padding: 2rem;
@@ -263,13 +259,11 @@ body.light-mode {
   color: #222;
 }
 
-
 body.light-mode nav {
   background: rgba(255, 255, 255, 0.6);
   color: #222;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 
 body.light-mode h1,
 body.light-mode h2,
@@ -278,21 +272,17 @@ body.light-mode h3 {
 }
 
 body.light-mode h3.name,
-body.light-mode h4.occupation
-{
+body.light-mode h4.occupation {
   color: #ccc;
 }
-
 
 body.light-mode a {
   color: #0077cc;
 }
 
-
 /* ESTILOS PARA DISPOSITIVOS MÓVILES*/
 
 @media (max-width: 768px) {
-
   /* Ajustes generales */
   section {
     padding: 3rem 1rem;
@@ -308,7 +298,7 @@ body.light-mode a {
     height: auto;
     padding: 1rem;
   }
-  
+
   nav ul {
     flex-direction: column; /* Apila los links */
     gap: 15px; /* Menos espacio entre links */
@@ -320,7 +310,7 @@ body.light-mode a {
   .hero {
     padding: 0 1rem;
   }
-  
+
   .avatar {
     width: 200px;
     height: 220px;
@@ -351,7 +341,6 @@ body.light-mode a {
   }
 }
 
-
 /*MENÚ HAMBURGUESA MOBILE*/
 
 /*botón hamburguesa*/
@@ -372,7 +361,7 @@ body.light-mode a {
 .hamburger-menu span {
   width: 2rem;
   height: 0.25rem;
-  background: #e0FF4F;
+  background: #e0ff4f;
   border-radius: 5px;
   transition: all 0.3s linear;
   position: relative;
@@ -393,15 +382,11 @@ body.light-mode a {
   transform: rotate(-45deg);
 }
 
-
 /*Media Query para móvil*/
 @media (max-width: 768px) {
-
-
   .hamburger-menu {
     display: flex;
   }
-
 
   nav ul#nav-links {
     position: fixed;
@@ -413,12 +398,12 @@ body.light-mode a {
     background: rgba(0, 23, 26, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    
+
     /*menú fuera de la pantalla */
     transform: translateX(120%);
     transition: transform 0.5s ease-in-out;
@@ -428,7 +413,6 @@ body.light-mode a {
   nav ul#nav-links.active {
     transform: translateX(0);
   }
-  
 
   nav {
     flex-direction: row;

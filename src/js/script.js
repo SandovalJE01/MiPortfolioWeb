@@ -7,7 +7,7 @@ enlaces.forEach(enlace => {
     const destino = document.querySelector(this.getAttribute('href'));
     if (destino) {
       destino.scrollIntoView({ behavior: 'smooth' });
-    }
+    };
   });
 });
 
@@ -61,4 +61,4 @@ hamburgerButton.classList.remove('active');
 hamburgerButton.setAttribute('aria-expanded', 'false');
 });
 });
-}
+};

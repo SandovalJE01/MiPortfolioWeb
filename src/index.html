@@ -3,334 +3,414 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/ezequiel-logo.svg">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/ezequiel-logo.svg"
+    />
     <title>Ezequiel Portfolio</title>
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
     <main>
-<nav>
-  <div class="logo">
-    <img src="./img/ezequiel-logo.svg" alt="Mi Logo" />
-  </div>
+      <nav>
+        <div class="logo">
+          <img src="./img/ezequiel-logo.svg" alt="MiLogo" />
+        </div>
 
-  <ul id="nav-links">
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#sobre-mi">Sobre Mí</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#tecnologias">Tecnologías y Herramientas</a></li>
-    <li><a href="#certificaciones">Certificaciones</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
+        <ul id="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#tecnologias">Tecnologías y Herramientas</a></li>
+          <li><a href="#certificaciones">Certificaciones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
 
-  <button class="hamburger-menu" id="hamburger-menu" aria-label="Abrir menú">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</nav>
+        <button
+          class="hamburger-menu"
+          id="hamburger-menu"
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
 
-<section class="hero" id="inicio">
-  <img loading="lazy" src="./img/fotoCV-sinfondo.png" alt="Mi Avatar" class="avatar" />
-  <h3 class="name">Ezequiel Sandoval</h3>
-  <h4 class="occupation">Desarrollador Full Stack MERN</h4>
-</section>
-
-<section class="sobre-mi" id="sobre-mi">
-  <h1 class="title">Sobre Mi</h1>
-  <div class="container">
-    <h3 class="info">
-      Hola! 👋 Soy Desarrollador Full-Stack especializado en el stack
-      M.E.R.N. Desde que descubrí el mundo del desarrollo en 2023, me he
-      sumergido en la creación de aplicaciones web, explorando tanto el
-      Front-End como el Back-End con curiosidad y pasión. Mi día a día
-      consiste en investigar, practicar y aplicar nuevas tecnologías para
-      optimizar mis proyectos y enfrentar desafíos con creatividad. Busco
-      oportunidades para colaborar en equipos innovadores, aprender de
-      profesionales y contribuir con ideas frescas y dedicación. Estoy listo
-      para incorporarme a equipos de trabajos, con energía y muchas ganas de
-      crecer en el sector. ¡Trabajemos juntos!
-    </h3>
-
-    <img loading="lazy" class="img-coding" src="./img/gummy-coding.svg" alt="" />
-  </div>
-</section>
-
-<section id="proyectos">
-  <h1>Proyectos</h1>
-  <div class="cards-proyects">
-    <div class="card-proyect">
-      <h3>Mascotijos Web</h3>
-      <img
-      loading="lazy"
-        class="img-proyect"
-        src="./img/view-mascotijos.png"
-        alt="Proyecto 1"
-      />
-      <p>Landing Page para una Tienda de mascotas. Ubicado en Corrientes Capital</p>
-      <p>HTML-CSS_JAVASCRIPT</p>
-      <p>
-        <span
-          ><a
-            href="https://github.com/SandovalJE01/MascotijosPaginaWeb"
-            target="_blank"
-            ><i class="fa fa-github"></i></a
-        ></span>
-        <span
-          ><a
-            href="https://mascotijos-pagina-web-jonathan-ezequiel-sandovals-projects.vercel.app/"
-            target="_blank"
-            ><i class="fa fa-link"></i></a
-        ></span>
-      </p>
-    </div>
-    <!-- Más tarjetas -->
-    <div class="cards-proyects">
-      <div class="card-proyect">
-        <h3>CositasRicas Web</h3>
+      <section class="hero" id="inicio">
         <img
-        loading="lazy"
-          class="img-proyect"
-          src="./img/view-cositasRicas.png"
-          alt="Proyecto 2"
+          loading="lazy"
+          src="./img/fotoCV-sinfondo.png"
+          alt="Mi Avatar"
+          class="avatar"
         />
-        <p>Sitio Web Proyecto, con varias paginas</p>
-        <p>HTML-SASS-CSS-BOOTSTRAP</p>
-        <span
-          ><a
-            href="https://github.com/SandovalJE01/ProyectoFinal-DesarrolloWeb"
-            target="_blank"
-            ><i class="fa fa-github"></i></a
-        ></span>
-        <span
-          ><a
-            href="https://proyecto-final-sandoval-54ni-sandovalje01.vercel.app/"
-            target="_blank"
-            ><i class="fa fa-link"></i></a
-        ></span>
-      </div>
-    </div>
-    <div class="cards-proyects">
-      <div class="card-proyect">
-        <h3>CositasRicas Ecommerce</h3>
-        <img loading="lazy"
-          class="img-proyect"
-          src="./img/view-cositasRicasEcommerce.png"
-          alt="Proyecto 3"
-        />
-        <p>Proyecto Tienda Online</p>
-        <p>HTML-CSS-JAVASCRIPT</p>
-        <span
-          ><a
-            href="https://github.com/SandovalJE01/ProyectoEcommerce-JavaScript"
-            target="_blank"
-            ><i class="fa fa-github"></i></a
-        ></span>
-        <span
-          ><a href="https://cositasricasshop.vercel.app/" target="_blank"
-            ><i class="fa fa-link"></i></a
-        ></span>
-      </div>
-    </div>
-  </div>
-</section>
+        <h3 class="name">Ezequiel Sandoval</h3>
+        <h4 class="occupation">Desarrollador Full Stack MERN</h4>
+      </section>
 
-<section id="tecnologias">
-  <h1>Tecnologías y Herramientas</h1>
+      <section class="sobre-mi" id="sobre-mi">
+        <h1 class="title">Sobre Mi</h1>
+        <div class="container">
+          <h3 class="info">
+            Hola! 👋 Soy Desarrollador Full-Stack especializado en el stack
+            M.E.R.N. Desde que descubrí el mundo del desarrollo en 2023, me he
+            sumergido en la creación de aplicaciones web, explorando tanto el
+            Front-End como el Back-End con curiosidad y pasión. Mi día a día
+            consiste en investigar, practicar y aplicar nuevas tecnologías para
+            optimizar mis proyectos y enfrentar desafíos con creatividad. Busco
+            oportunidades para colaborar en equipos innovadores, aprender de
+            profesionales y contribuir con ideas frescas y dedicación. Estoy
+            listo para incorporarme a equipos de trabajos, con energía y muchas
+            ganas de crecer en el sector. ¡Trabajemos juntos!
+          </h3>
 
-  <div class="tech-group">
-    <h3>Lenguajes</h3>
-    <div class="cards">
-      <div class="card">
-        <img loading="lazy" src="./img/logos/html5.svg" alt="html5" />
-        <p>HTML5</p>
-      </div>
-      <!-- Más tarjetas -->
-      <div class="card">
-        <img loading="lazy" src="./img/logos/css.svg" alt="css" />
-        <p>CSS</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/javascript.svg" alt="javascript" />
-        <p>JavaScript</p>
-      </div>
-    </div>
-  </div>
+          <img
+            loading="lazy"
+            class="img-coding"
+            src="./img/gummy-coding.svg"
+            alt=""
+          />
+        </div>
+      </section>
 
-  <div class="tech-group">
-    <h3>Frontend</h3>
-    <div class="cards">
-      <div class="card">
-        <img loading="lazy" src="./img/logos/react_wordmark_light.svg" alt="React" />
-        <p>React</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/materialui.svg" alt="materialui" />
-        <p>MaterialUI</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/bootstrap.svg" alt="bootstrap" />
-        <p>Bootstrap</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/nextjs_logo_light.svg" alt="nextjs" />
-        <p>NextJS</p>
-      </div>
-    </div>
-  </div>
+      <section id="proyectos">
+        <h1>Proyectos</h1>
+        <div class="cards-proyects">
+          <div class="card-proyect">
+            <h3>Mascotijos Web</h3>
+            <img
+              loading="lazy"
+              class="img-proyect"
+              src="./img/view-mascotijos.png"
+              alt="Proyecto 1"
+            />
+            <p>
+              Landing Page para una Tienda de mascotas. Ubicado en Corrientes
+              Capital
+            </p>
+            <p>HTML-CSS_JAVASCRIPT</p>
+            <p>
+              <span
+                ><a
+                  href="https://github.com/SandovalJE01/MascotijosPaginaWeb"
+                  target="_blank"
+                  ><i class="fa fa-github"></i></a
+              ></span>
+              <span
+                ><a
+                  href="https://mascotijos-pagina-web-jonathan-ezequiel-sandovals-projects.vercel.app/"
+                  target="_blank"
+                  ><i class="fa fa-link"></i></a
+              ></span>
+            </p>
+          </div>
+          <!-- Más tarjetas -->
+          <div class="cards-proyects">
+            <div class="card-proyect">
+              <h3>CositasRicas Web</h3>
+              <img
+                loading="lazy"
+                class="img-proyect"
+                src="./img/view-cositasRicas.png"
+                alt="Proyecto 2"
+              />
+              <p>Sitio Web Proyecto, con varias paginas</p>
+              <p>HTML-SASS-CSS-BOOTSTRAP</p>
+              <span
+                ><a
+                  href="https://github.com/SandovalJE01/ProyectoFinal-DesarrolloWeb"
+                  target="_blank"
+                  ><i class="fa fa-github"></i></a
+              ></span>
+              <span
+                ><a
+                  href="https://proyecto-final-sandoval-54ni-sandovalje01.vercel.app/"
+                  target="_blank"
+                  ><i class="fa fa-link"></i></a
+              ></span>
+            </div>
+          </div>
+          <div class="cards-proyects">
+            <div class="card-proyect">
+              <h3>CositasRicas Ecommerce</h3>
+              <img
+                loading="lazy"
+                class="img-proyect"
+                src="./img/view-cositasRicasEcommerce.png"
+                alt="Proyecto 3"
+              />
+              <p>Proyecto Tienda Online</p>
+              <p>HTML-CSS-JAVASCRIPT</p>
+              <span
+                ><a
+                  href="https://github.com/SandovalJE01/ProyectoEcommerce-JavaScript"
+                  target="_blank"
+                  ><i class="fa fa-github"></i></a
+              ></span>
+              <span
+                ><a href="https://cositasricasshop.vercel.app/" target="_blank"
+                  ><i class="fa fa-link"></i></a
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <div class="tech-group">
-    <h3>Backend</h3>
-    <div class="cards">
-      <div class="card">
-        <img loading="lazy" src="./img/logos/nodejs.svg" alt="Node.js" />
-        <p>Node.js</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/expressjs.svg" alt="express" />
-        <p>Express</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/nestjs.svg" alt="nestjs" />
-        <p>NestJS</p>
-      </div>
-    </div>
-  </div>
+      <section id="tecnologias">
+        <h1>Tecnologías y Herramientas</h1>
 
-  <div class="tech-group">
-    <h3>Bases de Datos</h3>
-    <div class="cards">
-      <div class="card">
-        <img loading="lazy" src="./img/logos/mongodb-wordmark.svg" alt="MongoDB" />
-        <p>MongoDB</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/Mongoose.js.svg" alt="Mongoose" />
-        <p>Mongoose</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="tech-group">
-    <h3>Testing</h3>
-    <div class="cards">
-      <div class="card">
-        <img loading="lazy" src="./img/logos/jest.svg" alt="Jest" />
-        <p>Jest</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/vitest.svg" alt="vitest" />
-        <p>Vitest</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/postman.svg" alt="postman" />
-        <p>Postman</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="tech-group">
-    <h3>Herramientas</h3>
-    <div class="cards">
-      <div class="card">
-        <img loading="lazy" src="./img/logos/git.svg" alt="Git" />
-        <p>Git</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/GitHub.svg" alt="Github" />
-        <p>GitHub</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="tech-group">
-    <h3>Gestion de Proyectos</h3>
-    <div class="cards">
-      <div class="card">
-        <img loading="lazy" src="./img/logos/Trello.svg" alt="Trello" />
-        <p>Trello</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/notion.svg" alt="Notion" />
-        <p>Notion</p>
-      </div>
-      <div class="card">
-        <img loading="lazy" src="./img/logos/clickup.com.svg" alt="ClickUp" />
-        <p>ClickUp</p>
-      </div>
-                <div class="card">
-        <img loading="lazy" src="./img/logos/gemini_wordmark.svg" alt="Gemini" />
-        <p>Gemini</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="certificaciones">
-  <h1>Certificaciones</h1>
-  <div class="cards">
-    <div class="card">
-      <img
-      loading="lazy"
-        src="./img/certificados/certificado-carreraFullStack.png"
-        alt="fullstack"
-      />
-      <h3>Certificado Full Stack</h3>
-      <a
-        href="https://pub.coderhouse.com/legacy-certificates/6686ee734494e30019d246a8?lang=es"
-        target="_blank"
-        >Ver Credencial</a
-      >
-    </div>
-    <!-- Más tarjetas -->
-    <div class="card">
-      <img loading="lazy"
-        src="./img/certificados/certificado-carreraFrontend.png"
-        alt="frontend"
-      />
-      <h3>Certificado Frontend React</h3>
-      <a
-        href="https://pub.coderhouse.com/legacy-certificates/659f748f4b24312299368648?lang=es"
-        target="_blank"
-        >Ver Credencial</a
-      >
-    </div>
-    <div class="card">
-      <img loading="lazy" src="./img/certificados/Certificado-Backend.png" alt="backend" />
-      <h3>Certificado Backend</h3>
-      <a
-        href="https://pub.coderhouse.com/legacy-certificates/6684f6aeefbae0d83e997bab?lang=es"
-        target="_blank"
-        >Ver Credencial</a
-      >
-    </div>
+        <div class="tech-group">
+          <h3>Lenguajes</h3>
+          <div class="cards">
             <div class="card">
-            <img loading="lazy" src="./img/certificados/CertificadoDeParticipacion-InmersionIA.jpg" alt="IA" />
-      <h3>Certificado de Participacion - Alura + Google Gemini</h3>
-      <a href="https://credsverse.com/credentials/b3513f3a-1db3-42e7-8b31-e08f065d6031"
-        target="_blank">Ver Credencial</a> 
-    </div>
-  </div>
-</section>
+              <img loading="lazy" src="./img/logos/html5.svg" alt="html5" />
+              <p>HTML5</p>
+            </div>
+            <!-- Más tarjetas -->
+            <div class="card">
+              <img loading="lazy" src="./img/logos/css.svg" alt="css" />
+              <p>CSS</p>
+            </div>
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/javascript.svg"
+                alt="javascript"
+              />
+              <p>JavaScript</p>
+            </div>
+          </div>
+        </div>
 
-<section id="contacto">
-  <h1>Contacto</h1>
-  <form action="https://formspree.io/f/xnqkjlzw" method="post">
-    <input type="text" name="nombre"  placeholder="Tu Nombre" required />
-    <input type="email" name="email"  placeholder="Tu Email" required />
-    <input type="number" name="telefono"  placeholder="Telefono" required />
-    <textarea name="message" placeholder="Asunto" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
-</main>
+        <div class="tech-group">
+          <h3>Frontend</h3>
+          <div class="cards">
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/react_wordmark_light.svg"
+                alt="React"
+              />
+              <p>React</p>
+            </div>
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/materialui.svg"
+                alt="materialui"
+              />
+              <p>MaterialUI</p>
+            </div>
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/bootstrap.svg"
+                alt="bootstrap"
+              />
+              <p>Bootstrap</p>
+            </div>
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/nextjs_logo_light.svg"
+                alt="nextjs"
+              />
+              <p>NextJS</p>
+            </div>
+          </div>
+        </div>
 
-<footer>
-  <p>&copy; 2025 Ezequiel Sandoval. Todos los derechos reservados.</p>
-</footer>
+        <div class="tech-group">
+          <h3>Backend</h3>
+          <div class="cards">
+            <div class="card">
+              <img loading="lazy" src="./img/logos/nodejs.svg" alt="Node.js" />
+              <p>Node.js</p>
+            </div>
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/expressjs.svg"
+                alt="express"
+              />
+              <p>Express</p>
+            </div>
+            <div class="card">
+              <img loading="lazy" src="./img/logos/nestjs.svg" alt="nestjs" />
+              <p>NestJS</p>
+            </div>
+          </div>
+        </div>
 
-<script src="./js/script.js"></script>
-<script
-  src="https://kit.fontawesome.com/8cdaa4c984.js"
-  crossorigin="anonymous"></script>
+        <div class="tech-group">
+          <h3>Bases de Datos</h3>
+          <div class="cards">
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/mongodb-wordmark.svg"
+                alt="MongoDB"
+              />
+              <p>MongoDB</p>
+            </div>
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/Mongoose.js.svg"
+                alt="Mongoose"
+              />
+              <p>Mongoose</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-group">
+          <h3>Testing</h3>
+          <div class="cards">
+            <div class="card">
+              <img loading="lazy" src="./img/logos/jest.svg" alt="Jest" />
+              <p>Jest</p>
+            </div>
+            <div class="card">
+              <img loading="lazy" src="./img/logos/vitest.svg" alt="vitest" />
+              <p>Vitest</p>
+            </div>
+            <div class="card">
+              <img loading="lazy" src="./img/logos/postman.svg" alt="postman" />
+              <p>Postman</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-group">
+          <h3>Herramientas</h3>
+          <div class="cards">
+            <div class="card">
+              <img loading="lazy" src="./img/logos/git.svg" alt="Git" />
+              <p>Git</p>
+            </div>
+            <div class="card">
+              <img loading="lazy" src="./img/logos/GitHub.svg" alt="Github" />
+              <p>GitHub</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-group">
+          <h3>Gestion de Proyectos</h3>
+          <div class="cards">
+            <div class="card">
+              <img loading="lazy" src="./img/logos/Trello.svg" alt="Trello" />
+              <p>Trello</p>
+            </div>
+            <div class="card">
+              <img loading="lazy" src="./img/logos/notion.svg" alt="Notion" />
+              <p>Notion</p>
+            </div>
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/clickup.com.svg"
+                alt="ClickUp"
+              />
+              <p>ClickUp</p>
+            </div>
+            <div class="card">
+              <img
+                loading="lazy"
+                src="./img/logos/gemini_wordmark.svg"
+                alt="Gemini"
+              />
+              <p>Gemini</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="certificaciones">
+        <h1>Certificaciones</h1>
+        <div class="cards">
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./img/certificados/certificado-carreraFullStack.png"
+              alt="fullstack"
+            />
+            <h3>Certificado Full Stack</h3>
+            <a
+              href="https://pub.coderhouse.com/legacy-certificates/6686ee734494e30019d246a8?lang=es"
+              target="_blank"
+              >Ver Credencial</a
+            >
+          </div>
+          <!-- Más tarjetas -->
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./img/certificados/certificado-carreraFrontend.png"
+              alt="frontend"
+            />
+            <h3>Certificado Frontend React</h3>
+            <a
+              href="https://pub.coderhouse.com/legacy-certificates/659f748f4b24312299368648?lang=es"
+              target="_blank"
+              >Ver Credencial</a
+            >
+          </div>
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./img/certificados/Certificado-Backend.png"
+              alt="backend"
+            />
+            <h3>Certificado Backend</h3>
+            <a
+              href="https://pub.coderhouse.com/legacy-certificates/6684f6aeefbae0d83e997bab?lang=es"
+              target="_blank"
+              >Ver Credencial</a
+            >
+          </div>
+          <div class="card">
+            <img
+              loading="lazy"
+              src="./img/certificados/CertificadoDeParticipacion-InmersionIA.jpg"
+              alt="IA"
+            />
+            <h3>Certificado de Participacion - Alura + Google Gemini</h3>
+            <a
+              href="https://credsverse.com/credentials/b3513f3a-1db3-42e7-8b31-e08f065d6031"
+              target="_blank"
+              >Ver Credencial</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h1>Contacto</h1>
+        <form action="https://formspree.io/f/xnqkjlzw" method="post">
+          <input type="text" name="nombre" placeholder="Tu Nombre" required />
+          <input type="email" name="email" placeholder="Tu Email" required />
+          <input
+            type="number"
+            name="telefono"
+            placeholder="Telefono"
+            required
+          />
+          <textarea name="message" placeholder="Asunto" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ezequiel Sandoval. Todos los derechos reservados.</p>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8cdaa4c984.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
