@@ -109,6 +109,56 @@ section {
   opacity: 0.8;
 }
 
+/* Botón de CV para la sección Hero */
+.btn-cv {
+  /* Diseño 'Ghost Button' */
+  text-decoration: none;
+  color: #e0ff4f; /* Color de acento principal */
+  border: 2px solid #e0ff4f;
+  padding: 10px 24px;
+  border-radius: 50px; /* Coherente con la estética redondeada */
+  margin-top: 1.5rem; /* Espacio para separarlo de la ocupación */
+  font-weight: bold;
+  font-size: 1rem;
+  background: transparent;
+  
+  /* Transición suave para el efecto hover */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  
+  /* Mejoramos el alineamiento del ícono si se usa flex */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre el texto y el ícono */
+}
+
+/* Efecto hover innovador: 'Fill' + 'Glow' */
+.btn-cv:hover {
+  background: #e0ff4f; /* Relleno con el color de acento */
+  color: #00272b; /* Color del texto al color base oscuro del body */
+  
+  /* Sombra sutil que usa el color de acento para un efecto 'glow' */
+  box-shadow: 0 4px 20px rgba(224, 255, 79, 0.3); 
+  
+  /* Ligero 'lift' para dar sensación de profundidad */
+  transform: translateY(-3px);
+}
+
+/* Pequeña animación de entrada para el ícono */
+.btn-cv:hover i {
+  animation: bounce-horizontal 0.4s ease-out;
+}
+
+/* Animación personalizada para el ícono */
+@keyframes bounce-horizontal {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
 /* Sobre mi*/
 
 .container {
@@ -253,6 +303,96 @@ footer {
   margin-top: 2rem;
 }
 
+/* ESTILOS PARA EL SLIDER DE PROYECTOS*/
+
+.project-slider {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 1rem auto; 
+  border-radius: 8px; 
+}
+
+.slider-wrapper {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f0f0f0;
+}
+
+.slider-img {
+  width: 120%;
+  height: 110%;
+  object-fit: contain;
+  
+  /* Animación de FADE */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slider-img.active {
+  opacity: 1;
+  z-index: 1; 
+}
+
+/* Botones Prev/Next */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2; 
+  
+  background: transparent; 
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  font-size: 2.0rem; 
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.slider-btn:hover {
+  background: transparent;
+  color: #e0ff4f;
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+/* Puntos de navegación */
+.slider-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 1.0);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider-dot.active {
+  background: #e0ff4f;
+}
+
 /* LIGHT MODE*/
 body.light-mode {
   background-color: #e4e4e4;
@@ -278,6 +418,20 @@ body.light-mode h4.occupation {
 
 body.light-mode a {
   color: #0077cc;
+}
+
+body.light-mode .container {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .container .info {
+  color: #333; 
+}
+
+body.light-mode h1 {
+  color: #111;
 }
 
 /* ESTILOS PARA DISPOSITIVOS MÓVILES*/
@@ -419,4 +573,85 @@ body.light-mode a {
     height: 90px;
     padding: 5px 30px;
   }
+}
+
+.theme-toggle {
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* Botón circular */
+  cursor: pointer;
+  
+  /* Tamaño */
+  width: 50px;
+  height: 50px;
+  
+  /* Iconos */
+  font-size: 1.25rem; /* Tamaño de los iconos */
+  
+  /* Centrado de iconos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Transición suave */
+  transition: all 0.3s ease;
+  
+  /* Evitar que los iconos se seleccionen */
+  user-select: none; 
+  
+  /* Sombra para que destaque */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  
+  /*animación */
+  overflow: hidden; 
+  position: relative;
+}
+
+.theme-toggle:hover {
+  background: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/*ambos iconos en el centro */
+.theme-toggle .icon-moon,
+.theme-toggle .icon-sun {
+  position: absolute;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* ESTADO POR DEFECTO (MODO OSCURO) */
+.theme-toggle .icon-sun {
+  color: #f39c12;
+  transform: translateY(100%) scale(0.5);
+  opacity: 0;
+}
+
+.theme-toggle .icon-moon {
+  color: #e0ff4f;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* ESTADO ACTIVO (MODO CLARO) */
+.theme-toggle.sun-active .icon-sun {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.theme-toggle.sun-active .icon-moon {
+  transform: translateY(-100%) scale(0.5);
+  opacity: 0;
+}
+
+/* Ajustes para el modo claro */
+body.light-mode .theme-toggle {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .theme-toggle:hover {
+  background: #fff;
 }
